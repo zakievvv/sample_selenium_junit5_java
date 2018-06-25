@@ -1,6 +1,7 @@
 # Test Framework Overview
 Core consists of:
  - Junit5
+ - Jmeter
  - Allure reports
  - Slack IM integration (just a stub for now)
  - Selenium
@@ -38,7 +39,9 @@ Safari requires the following manual steps for tests execution:
 At the time of execution there may also be a pop up message - press option to agree with auto test session
 
 ### Running Tests on Mac OS X
-   `mvn test  -Dsurefire.suiteXmlFiles=mac-only.xml`   
+   Selenium `mvn test  -Dsurefire.suiteXmlFiles=mac-only.xml`
+   Jmeter `mvn jmeter:jmeter -f pom.xml`
+'   
 
 ### Show Reports
    `allure serve allure-results`
@@ -65,8 +68,9 @@ This is needed if Selenium WebDriver Manager does not work for any reason.
 3. Selenium drivers for the above and the Edgedriver   
    
 ### Running Tests on Windows
-   `mvn test  -Dsurefire.suiteXmlFiles=windows-only.xml`
-   
+   Selenium `mvn test  -Dsurefire.suiteXmlFiles=windows-only.xml`
+   Jmeter `mvn jmeter:jmeter -f pom.xml`
+      
 ### Scripts for Running, Reporting, Managing Reports
    Mac OS X only - I do not have Windows machine right now
    Currently is work in progress
