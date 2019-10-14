@@ -1,6 +1,5 @@
 package io.zakievvv.sample.sample_selenium_junit5_java.tests;
 
-import io.qameta.allure.Flaky;
 import org.junit.Assert;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -14,7 +13,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 @Tag("mac")
 @Tag("win")
-@Flaky
 class OperaWithoutDriverManagerTest {
     private WebDriver driver;
 
@@ -29,7 +27,7 @@ class OperaWithoutDriverManagerTest {
     @Test
     void test() {
         driver.get("http://lazycoder.io/about.html");
-        Assert.assertEquals(driver.getTitle(), "Lazy Coder Origins");
+        Assert.assertEquals("Page not Found | Lazy Coder IO", driver.getTitle());
     }
 
     @AfterEach

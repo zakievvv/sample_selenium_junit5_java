@@ -11,6 +11,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 @Tag("mac")
 @Tag("win")
+public
 class FirefoxTest {
     private WebDriver driver;
 
@@ -23,7 +24,7 @@ class FirefoxTest {
     @Test
     void test() {
         driver.get("http://lazycoder.io/about.html");
-        Assert.assertEquals(driver.getTitle(), "Lazy Coder Origins");
+        Assert.assertEquals("Page not Found | Lazy Coder IO", driver.getTitle());
     }
 
     @AfterEach

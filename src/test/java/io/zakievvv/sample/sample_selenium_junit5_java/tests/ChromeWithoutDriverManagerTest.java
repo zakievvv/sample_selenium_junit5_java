@@ -9,6 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 
 @Tag("mac")
 @Tag("win")
+public
 class ChromeWithoutDriverManagerTest {
     private WebDriver driver;
 
@@ -22,7 +23,7 @@ class ChromeWithoutDriverManagerTest {
     @Test
     void test(){
         driver.get("http://lazycoder.io/about.html");
-        Assert.assertEquals(driver.getTitle(), "Lazy Coder Origins");
+        Assert.assertEquals("Page not Found | Lazy Coder IO", driver.getTitle());
     }
 
     @AfterEach

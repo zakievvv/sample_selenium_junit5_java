@@ -10,6 +10,8 @@ Core consists of:
     This manager automatically updates and uses most recent versions of:
     Chrome, Firefox, Opera, PhantomJS, Microsoft Edge, and Internet Explorer
 
+![](selenium-junit5.gif)
+
 ### Mac OS Setup
 
    ```

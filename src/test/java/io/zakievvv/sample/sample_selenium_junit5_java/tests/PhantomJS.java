@@ -12,6 +12,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 
 @Tag("mac")
 @Tag("win")
+public
 class PhantomJS {
     private WebDriver driver;
 
@@ -23,8 +24,8 @@ class PhantomJS {
 
     @Test
     void test() {
-        this.driver.get("http://lazycoder.io/about.html");
-        Assert.assertEquals(driver.getTitle(), "Lazy Coder Origins");
+        driver.get("http://lazycoder.io/about.html");
+        Assert.assertEquals("Page not Found | Lazy Coder IO", driver.getTitle());
     }
 
     @AfterEach

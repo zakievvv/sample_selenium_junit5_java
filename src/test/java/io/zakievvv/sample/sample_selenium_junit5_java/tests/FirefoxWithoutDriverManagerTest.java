@@ -16,6 +16,7 @@ import java.io.File;
 
 @Tag("mac")
 @Tag("win")
+public
 class FirefoxWithoutDriverManagerTest {
     private WebDriver driver;
 
@@ -27,7 +28,7 @@ class FirefoxWithoutDriverManagerTest {
         if (System.getProperty("os.name").toLowerCase().contains("mac")) {
             FirefoxBinary ff = new FirefoxBinary(new File("/Applications/Firefox.app/Contents/MacOS/firefox-bin"));
             FirefoxProfile ffp = new FirefoxProfile();
-            driver = new FirefoxDriver(ff, ffp, capabilities);
+            driver = new FirefoxDriver();
         } else {
             driver = new FirefoxDriver();
         }
@@ -36,7 +37,7 @@ class FirefoxWithoutDriverManagerTest {
     @Test
     void test() {
         driver.get("http://lazycoder.io/about.html");
-        Assert.assertEquals(driver.getTitle(), "Lazy Coder Origins");
+        Assert.assertEquals("Page not Found | Lazy Coder IO", driver.getTitle());
     }
 
     @AfterEach

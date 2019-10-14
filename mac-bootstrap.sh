@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # mac-bootstrap.sh
-# by wilsonmar at gmail.com
+# originally by wilsonmar at gmail.com
 # This bash script bootstraps a MacOS laptop (like at https://github.com/fs/osx-bootstrap)
 # to run Selenium against a Java source file that
 # simply opens a web page in several browsers.
@@ -42,13 +42,10 @@ fi
 if ! command -v brew >/dev/null; then
   fancy_echo "Installing Homebrew..."
   ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" </dev/null
+
 else
   fancy_echo "Homebrew already installed. Skipping."
 fi
-
-
-fancy_echo "Install Caskroom ..."
-brew tap caskroom/cask
 
 
 if ! command -v java >/dev/null; then
@@ -57,6 +54,10 @@ if ! command -v java >/dev/null; then
 else
   fancy_echo "Java already installed. Skipping."
 fi
+
+
+fancy_echo "Install Caskroom ..."
+brew tap caskroom/cask
 
 
 if ! command -v mvn >/dev/null; then
