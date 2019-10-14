@@ -17,7 +17,7 @@ Core consists of:
    ```
    sh mac-bootstrap.sh
    ```
-
+Currently the following is under being fixed for latest beta version of Mac OS X Mojave - script stumbles upon several issues.
 This script installs the following if something is absent:
 
 1. Installs Homebrew `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
