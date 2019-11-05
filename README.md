@@ -1,8 +1,4 @@
-### Jmeter Tests
-     `mvn jmeter:jmeter -f pom.xml`
-
 ### Selenium Tests
-     `mvn test  -Dsurefire.suiteXmlFiles=mac-only.xml`
-     `allure serve allure-results`
-
+     mvn test
+     
 ![](selenium-junit5.gif)
