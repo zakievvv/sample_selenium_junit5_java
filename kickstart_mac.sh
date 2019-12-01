@@ -1,2 +1,4 @@
 #!/usr/bin/env bash
-mvn -Dtest=TestSuiteMac test
+mvn test -Dbrowser=chrome
+mvn test -Dbrowser=firefox
+mvn test -Dbrowser=opera
